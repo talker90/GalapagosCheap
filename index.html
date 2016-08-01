@@ -8,19 +8,66 @@
 	<title>Galapagos Cheap</title>
 
 	<style type="text/css">
+
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
 		h1 {
 			display: flex;
+			align-items: center;
 			justify-content: center;
+			font-size: 9vw;
+			margin-bottom: 3rem;
 		}
+
+		#nav {
+			display: flex;
+			justify-content: space-around;	
+			padding: 0;
+			list-style-type: none;
+			font-size: 4vw;
+		}
+
+		.active {
+			color: grey;
+			font-weight: 400;
+			border: solid lightgrey;
+			padding: 4vw;
+		}
+
+		@media (max-width:413px) {
+			#nav {
+				flex-wrap: wrap;
+			}
+
+			.nav-items {
+				flex: 0 1 10rem;
+				font-size: 5vw;
+				padding-bottom: 1rem;
+			}
+		}
+
 	</style>
 </head>
 <body>
 
-<h1>Galapagos Cheap</h1>
-
-<a href="accommodation.html">Accommodation</a>
-
-<a href="talker90.github.io/GalapagosCheap/accommondation.html">Accommondation test 2</a>
+<header>
+	<h1>Galapagos Cheap</h1>
+	<nav>
+		<ul id="nav">
+			<li class="nav-items"><a class="active" href="index.html">The Islands</a></li>
+			<li class="nav-items"><a href="accommodation.html">Accommodation</a></li>
+			<li class="nav-items"><a href="#0">Sites</a></li>
+			<li class="nav-items"><a href="#0">Animals</a></li>
+		</ul>
+	</nav>
+</header>
 
 </body>
 </html>
