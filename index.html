@@ -5,12 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald|Montserrat">
+
 	<title>Galapagos Cheap</title>
 
 	<style type="text/css">
 
 		body {
-			font-family: Arial, sans-serif;
+			font-family: Oswald, Montserrat, Arial, sans-serif;
 		}
 
 		a {
@@ -34,14 +36,11 @@
 			font-size: 4vw;
 		}
 
-		.active {
-			color: grey;
-			font-weight: 400;
-			border: solid lightgrey;
-			padding: 4vw;
+		.nav-items:hover {
+			font-size: 130%;
 		}
 
-		@media (max-width:413px) {
+		@media (max-width: 413px) {
 			#nav {
 				flex-wrap: wrap;
 			}
@@ -53,6 +52,15 @@
 			}
 		}
 
+		@media (min-width: 673px) {
+			h1 {
+				font-size: 4rem;
+			}
+
+			#nav {
+				font-size: 1.8rem;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -61,7 +69,7 @@
 	<h1>Galapagos Cheap</h1>
 	<nav>
 		<ul id="nav">
-			<li class="nav-items"><a class="active" href="index.html">The Islands</a></li>
+			<li class="nav-items"><a href="index.html">The Islands</a></li>
 			<li class="nav-items"><a href="accommodation.html">Accommodation</a></li>
 			<li class="nav-items"><a href="#0">Sites</a></li>
 			<li class="nav-items"><a href="#0">Animals</a></li>
