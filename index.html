@@ -19,6 +19,10 @@
   			box-sizing: inherit;
 		}
 
+		main {
+			display: block;
+		}
+
 		body {
 			font-family: Oswald, Montserrat, Arial, sans-serif;
 		}
@@ -30,10 +34,8 @@
 
 		h1 {
 			display: flex;
-			align-items: center;
 			justify-content: center;
 			font-size: 9vw;
-			margin-bottom: 3rem;
 		}
 
 		#nav {
@@ -49,11 +51,52 @@
 			font-size: 130%;
 		}
 
+		input[id="hamburger"] {
+			display: none;
+		}
+
+		@media only screen and (min-width:0) and (max-width:360px) {
+
+			label[for="hamburger"] {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 10vmin;
+			}
+	
+			label[for="hamburger"] + nav {
+				overflow: hidden;
+				height: 0;
+			}
+	
+			input[id="hamburger"]:checked ~ nav {
+				height: auto;
+			}
+
+		}	
+
+
 		#GalapagosArchipelago {
 			width: 100%;
 			height: 35vw;
-			margin-top: 5rem;
+			margin-top: 2rem;
 			background: url("galapagos_archipelago_NADIMI2016.svg") center center/auto 100% no-repeat;
+		}
+
+		@media only screen and (min-width:361px) {
+
+			label[for="hamburger"] {
+				display: none;
+
+			}
+
+			h1 {
+				margin-bottom: 3rem;
+			}
+
+			#GalapagosArchipelago {
+				margin-top: 5rem;
+			}
 		}
 		
 
@@ -73,6 +116,10 @@
 
 <header>
 	<h1>Galapagos Cheap</h1>
+
+	<input type="checkbox" id="hamburger" />
+	<label for="hamburger">&#x2630;</label>
+	
 	<nav>
 		<ul id="nav">
 			<li class="nav-items"><a href="index.html">The Islands</a></li>
@@ -85,5 +132,6 @@
 
 <div id="GalapagosArchipelago" role="img" aria-label="Basic map of the Galapagos Archipelago"></div>
 
+<script>document.createElement('main');</script>
 </body>
 </html>
